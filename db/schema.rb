@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180514120646) do
+ActiveRecord::Schema.define(version: 20180514162404) do
 
   create_table "eventposts", force: :cascade do |t|
     t.string   "title"
@@ -81,10 +81,13 @@ ActiveRecord::Schema.define(version: 20180514120646) do
     t.string   "sale"
     t.string   "menuimg"
     t.string   "image"
+    t.string   "foodtype"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "range"
+    t.string   "point1"
+    t.string   "point2"
   end
 
   add_index "restaurants", ["user_id"], name: "index_restaurants_on_user_id"
